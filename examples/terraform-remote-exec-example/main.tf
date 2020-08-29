@@ -166,6 +166,12 @@
         ## dump out ip to a text file
         provisioner "remote-exec" {
         inline = ["echo ${aws_instance.dec2_nginx.public_ip} > ip_address.txt",]
+        connection {
+           type     = "ssh"
+           host     = self.default_ip_address
+           user     = "ubuntu"
+           password = "password"
+           }
         }
 
        ## tagging
