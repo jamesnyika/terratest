@@ -170,7 +170,7 @@
            type     = "ssh"
            host     = self.public_ip
            user     = "ubuntu"
-           # password = "password"
+           private_key = var.ssh_priv_key
            }
         }
 

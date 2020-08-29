@@ -14,6 +14,10 @@ variable "ssh_pub_key" {
   description = "A public ssh key - NOT private"
 }
 
+variable "ssh_priv_key" {
+  description = "A private key to log in with"
+}
+
 variable "instance_tenancy" {
   description = "Instance Tenancy"
   type        = string
