@@ -168,7 +168,7 @@
         inline = ["echo ${aws_instance.dec2_nginx.public_ip} > ip_address.txt",]
         connection {
            type     = "ssh"
-           host     = self.default_ip_address
+           host     = self.public_ip
            user     = "ubuntu"
            password = "password"
            }
