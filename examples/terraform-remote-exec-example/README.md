@@ -1,5 +1,4 @@
 # Terraform remote-exec example
-Configuration
 
 This folder contains a simple Terraform module that deploys resources in [AWS](https://aws.amazon.com/) to demonstrate
 how you can use Terratest to test modules which use `remote-exec`, `files`, and other ssh-based 
