@@ -69,7 +69,7 @@ resource "aws_security_group" "example" {
       key_name = "d_keypair"
       
       ## reference your public key : NEVER UPLOAD PRIVATE KEY 
-      public_key = file("files/id_rsa.pub")
+      public_key = var.ssh_pub_key
    }
 
 
