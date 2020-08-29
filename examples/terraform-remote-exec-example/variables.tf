@@ -10,6 +10,9 @@
 # REQUIRED PARAMETERS
 # You must provide a value for each of these parameters.
 # ---------------------------------------------------------------------------------------------------------------------
+variable "ssh_pub_key" {
+  description = "A public ssh key - NOT private"
+}
 
 variable "key_pair_name" {
   description = "The EC2 Key Pair to associate with the EC2 Instance for SSH access."
