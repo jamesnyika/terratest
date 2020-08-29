@@ -14,37 +14,13 @@ variable "ssh_pub_key" {
   description = "A public ssh key - NOT private"
 }
 
-variable "key_pair_name" {
-  description = "The EC2 Key Pair to associate with the EC2 Instance for SSH access."
+variable "instance_tenancy" {
+  description = "Instance Tenancy"
   type        = string
 }
 
-# ---------------------------------------------------------------------------------------------------------------------
-# OPTIONAL PARAMETERS
-# These parameters have reasonable defaults.
-# ---------------------------------------------------------------------------------------------------------------------
-
-variable "aws_region" {
+variable "region" {
   description = "The AWS region to deploy into"
   type        = string
   default     = "us-east-1"
 }
-
-variable "instance_name" {
-  description = "The Name tag to set for the EC2 Instance."
-  type        = string
-  default     = "terratest-example"
-}
-
-variable "ssh_port" {
-  description = "The port the EC2 Instance should listen on for SSH requests."
-  type        = number
-  default     = 22
-}
-
-variable "ssh_user" {
-  description = "SSH user name to use for remote exec connections,"
-  type        = string
-  default     = "ubuntu"
-}
-
